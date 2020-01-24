@@ -20,6 +20,9 @@ namespace EspComConsole
         {
             var validPortName = Helpers.GetValidPortName(string.IsNullOrEmpty(portName) ? Properties.Settings.Default.PortName : portName);
 
+            if (validPortName == null)
+                throw(new Exception("Any COM Device does not exists."));
+
             _SerialPort = new SerialPort
             {
                 PortName = validPortName,

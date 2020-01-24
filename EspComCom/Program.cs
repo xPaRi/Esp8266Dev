@@ -224,7 +224,7 @@ namespace EspComCom
 
         private static void ShowHelp()
         {
-            ConsoleEx.WriteError("Valid syntax EspComCom.exe </PIPE:pipeName> <[UPLOAD:<fileName>]|[DOFILE:<fileName>]|[CMD:<command>]>");
+            ConsoleEx.WriteError("Valid syntax EspComCom.exe </PIPE:pipeName> <[/UPLOAD:<fileName>]|[/DOFILE:<fileName>]|[/CMD:<command>]>");
         }
     }
 }
