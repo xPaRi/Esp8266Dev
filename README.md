@@ -51,6 +51,10 @@ Example:
     upload     - Upload file(s). Parameter [filename]
 ```
 
+Example:
+Connect to COM4 as pipe *compipe* and do command *ls* for esp directory listing.
+![EspComConsole.png](https://raw.githubusercontent.com/xPaRi/Esp8266Dev/master/doc/EspComConsole.png)
+
 #### 2. Upload file over EspComConsole
 Type ```upload <fileName>``` in console (```EspComConsole.exe```). If you want to use the open file dialog box, type only ```upload```.
 
@@ -68,6 +72,8 @@ Example:
     36 line(s) sended
 ```
 
+![EspComConsole_upload.png](https://raw.githubusercontent.com/xPaRi/Esp8266Dev/master/doc/EspComConsole_upload.png)
+
 #### 3. Upload file over EspComCom
 Type ```EspComCom /PIPE:<pipename> /UPLOAD:<fileName>``` in command line.
 
@@ -83,8 +89,10 @@ Example:
     C:\Esp8266Dev>
 ```
 
+![EspComCom_upload.png](https://raw.githubusercontent.com/xPaRi/Esp8266Dev/master/doc/EspComCom_upload.png)
+
 #### 4. Run Lua script over EspComCom
-Type ```EspComCom /PIPE:<pipename> /RUN:<fileName>``` in command line.
+Type ```EspComCom /PIPE:<pipename> /DOFILE:<fileName>``` in command line.
 
 Example:
 ```
@@ -96,19 +104,25 @@ Example:
     
     C:\Esp8266Dev>     
 ```
+
+![EspComCom_dofile.png](https://raw.githubusercontent.com/xPaRi/Esp8266Dev/master/doc/EspComCom_dofile.png)
+
 #### 5. Run command over EspComCom
 Type ```EspComCom /PIPE:<pipename> /CMD:<command>``` in command line.
 
 Example:
 ```
-    C:\dev\PARI\Esp8266Dev\install>EspComCom /PIPE:esppipe /CMD:a=30;print(a*a)
+    C:\Esp8266Dev>EspComCom /PIPE:esppipe /CMD:a=30;print(a*a)
     EspComCom - version 1.0.7328.25226
 
     Connect to pipe 'esppipe' successed.
     Ok
 
-    C:\dev\PARI\Esp8266Dev\install>
+    C:\Esp8266Dev>
 ```
+
+![EspComCom_cmd.png](https://raw.githubusercontent.com/xPaRi/Esp8266Dev/master/doc/EspComCom_cmd.png)
+
 Result in console (```EspComConsole.exe```).
 ```
 Pipe client connected.
@@ -117,6 +131,8 @@ a=30;print(a*a)
 Pipe server 'esppipe' waiting for connection.
 900
 ```
+
+![EspComConsole_cmd.png](https://raw.githubusercontent.com/xPaRi/Esp8266Dev/master/doc/EspComConsole_cmd.png)
 
 ### Installation
 Copy contains of ```install``` directory to your own directory and enjoy it!
