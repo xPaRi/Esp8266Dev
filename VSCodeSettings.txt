@@ -1,0 +1,82 @@
+NastavenÌ editoru VS CODE
+-------------------------
+V projektovÈm adres·¯i, kde m·me projekt pro ESP/Lua vytvo¯it adres·¯ .vscode a v nÏm vytvo¯it soubor tasks.json
+Bohuûel to musÌ b˝t v tomto adres·¯i, ned· se to zatÌm nijak glob·lnÏ.
+
+Do nÏj nakopÌrovat n·sledujÌcÌ nastavenÌ, kterÈ zajistÌ, ûe budou zn·mÈ tasky FIRST ... FIRST-DOLINE.
+P¯Ìsluön˝/È porty nastavÌme v tasku FIRST. 
+
+Ty lze vyvolat buÔ jako Ctl+P, task <mezera> <vybrat>, nebo kl·vesovou zkratkou (viz. dalöÌ kapitola)
+
+Soubor tasks.json
+-----------------
+
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        //FIRST
+        {
+            "taskName": "FIRST",
+            "type": "process",
+            "command": "c:/Users/PaRi/Disk Google/Development.ESP/bin/EspComConsole/EspComConsole.exe",
+            "args": ["/PIPE:FIRST", "/PORTS:COM10"],
+            "presentation": {"echo": true, "reveal": "always", "focus": false, "panel": "shared"}
+        },
+
+        //FIRST-UPLOAD
+        {
+            "taskName": "FIRST-UPLOAD",
+            "type": "process",
+            "command": "c:/Users/PaRi/Disk Google/Development.ESP/bin/EspComConsole/EspComCom.exe",
+            "args": ["/PIPE:FIRST", "/UPLOAD:${file}"],
+            "presentation": {"echo": true, "reveal": "always", "focus": true, "panel": "shared"},
+            "group": {"kind": "build", "isDefault": true},
+            "isBackground": false
+        },
+
+        //FIRST-DOFILE
+        {
+            "taskName": "FIRST-DOFILE",
+            "type": "process",
+            "command": "c:/Users/PaRi/Disk Google/Development.ESP/bin/EspComConsole/EspComCom.exe",
+            "args": ["/PIPE:FIRST", "/DOFILE:${fileBasename}"],
+            "presentation": {"echo": true, "reveal": "never", "focus": true, "panel": "shared"},
+            "isBackground": true
+        },
+
+        //FIRST-DOLINE
+        {
+            "taskName": "FIRST-DOLINE",
+            "type": "process",
+            "command": "c:/Users/PaRi/Disk Google/Development.ESP/bin/EspComConsole/EspComCom.exe",
+            "args": ["/PIPE:FIRST", "/DOFILE:${file}", "/LINE:${lineNumber}"],
+            "presentation": {"echo": true, "reveal": "never", "focus": true, "panel": "shared"},
+            "isBackground": true
+        }
+        
+    ]
+}
+
+⁄prava kl·vesov˝ch zkratek
+--------------------------
+Otev¯eme soubor s definicÌ kl·vesov˝ch zkratek (File/References/Keyboard shortcuts (Ctrl+K Ctrl+S)),
+ùukneme na keybindig.json a vloûÌme dolnÌ Ëty¯i definice (prvnÌ 4 jsou zde jen pro ilustraci).
+Vazba mezi spuötÏn˝m taskem a kombinacÌ kl·ves je p¯es klÌË "taskName" <-> "args"
+
+Soubor keybindig.json
+---------------------
+
+// Place your key bindings in this file to overwrite the defaults
+[
+	{ "key": "ctrl+enter",			"command": "editor.action.copyLinesDownAction",			"when": "editorTextFocus && !editorReadonly" },
+	{ "key": "alt+space",			"command": "editor.action.addCommentLine",				"when": "editorTextFocus && !editorReadonly" },
+	{ "key": "ctrl+alt+space",		"command": "editor.action.removeCommentLine",			"when": "editorTextFocus && !editorReadonly" },
+	{ "key": "ctrl+y",				"command": "editor.action.deleteLines",					"when": "editorTextFocus && !editorReadonly" },
+
+	{ "key": "ctrl+alt+F9",         "command": "workbench.action.tasks.runTask",            "args": "FIRST"},
+	{ "key": "ctrl+F9",             "command": "workbench.action.tasks.runTask",            "args": "FIRST-UPLOAD"},
+	{ "key": "F9",                  "command": "workbench.action.tasks.runTask",            "args": "FIRST-DOFILE"},
+	{ "key": "F12",                 "command": "workbench.action.tasks.runTask",            "args": "FIRST-DOLINE"}
+]

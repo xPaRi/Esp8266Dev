@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspComConsole", "EspComConsole\EspComConsole.csproj", "{08499F00-452E-4A6D-9FF3-9B33D8A88974}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspComCom", "EspComCom\EspComCom.csproj", "{2D97FCBF-B2B0-4F1F-B000-C31164DC95F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspComLib", "EspComLib\EspComLib.csproj", "{1607201D-D28C-4318-AE8D-AA644BED4D29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspComDirect", "EspComDirect\EspComDirect.csproj", "{0213AB99-D94C-48DF-845B-4305E7F0ACE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48197F6F-B962-4258-98F6-F4BDA1BD747E}"
+	ProjectSection(SolutionItems) = preProject
+		CopyToDev.cmd = CopyToDev.cmd
+		PSPadSettings.txt = PSPadSettings.txt
+		VSCodeSettings.txt = VSCodeSettings.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08499F00-452E-4A6D-9FF3-9B33D8A88974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08499F00-452E-4A6D-9FF3-9B33D8A88974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08499F00-452E-4A6D-9FF3-9B33D8A88974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08499F00-452E-4A6D-9FF3-9B33D8A88974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D97FCBF-B2B0-4F1F-B000-C31164DC95F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D97FCBF-B2B0-4F1F-B000-C31164DC95F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D97FCBF-B2B0-4F1F-B000-C31164DC95F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D97FCBF-B2B0-4F1F-B000-C31164DC95F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1607201D-D28C-4318-AE8D-AA644BED4D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1607201D-D28C-4318-AE8D-AA644BED4D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1607201D-D28C-4318-AE8D-AA644BED4D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1607201D-D28C-4318-AE8D-AA644BED4D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0213AB99-D94C-48DF-845B-4305E7F0ACE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0213AB99-D94C-48DF-845B-4305E7F0ACE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0213AB99-D94C-48DF-845B-4305E7F0ACE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0213AB99-D94C-48DF-845B-4305E7F0ACE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA4F4BE3-9A5C-4958-AD6B-0A7D8E432DEA}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://pari.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = EspComConsole\\EspComConsole.csproj
+		SccProjectName1 = EspComConsole
+		SccLocalPath1 = EspComConsole
+		SccProjectUniqueName2 = EspComCom\\EspComCom.csproj
+		SccProjectName2 = EspComCom
+		SccLocalPath2 = EspComCom
+		SccProjectUniqueName3 = EspComLib\\EspComLib.csproj
+		SccProjectName3 = EspComLib
+		SccLocalPath3 = EspComLib
+		SccProjectUniqueName4 = EspComDirect\\EspComDirect.csproj
+		SccProjectName4 = EspComDirect
+		SccLocalPath4 = EspComDirect
+	EndGlobalSection
+EndGlobal

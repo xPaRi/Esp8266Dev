@@ -1,0 +1,15 @@
+Nastavení editoru PSPad
+1. V menu: Nastavení / Nastavení zvýrazòovaèù...
+   pøejdeme na <not assigned> a v záložce Upøesnìní vybereme 'Lua'
+2. V seznamu (levá èást) ji zatrhneme
+3. V záložce Barvy vybereme 'pari' a dáme Naèíst
+4. V záložce Externí programy pøidáme tøí aplikace:
+	EspComCom
+	"c:\Users\PaRi\Disk Google\Development.ESP\bin\EspComConsole\EspComCom.exe" UPLOAD "%DosDir%%Name%%Ext%"
+
+	EspComConsole
+	"c:\Users\PaRi\Disk Google\Development.ESP\bin\EspComConsole\EspComConsole.exe"
+
+	DoFile
+	"c:\Users\PaRi\Disk Google\Development.ESP\bin\EspComConsole\EspComCom.exe" DOFILE "%Name%%Ext%"
+5. V záložce Externí programy zatrhneme 'Pøed spuštìním uložit všechny soubory'
